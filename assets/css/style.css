@@ -1,0 +1,99 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+ background-image: url(../images/image.png);
+ background-size: cover;
+ background-position: center;
+ position: relative;
+}
+
+
+.navbar{
+    width: 90%;
+    margin: auto;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    color: azure;
+    font-weight: bold;
+    font-family: sans-serif;
+font-size: 150%;
+
+}
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+    
+
+}
+.content{
+   width: 100%;
+   position: absolute;
+   top: 20%;
+}
+.left{
+    margin-left: 6%;
+
+}
+.left h2{
+    font-size: 300%;
+    font-family: sans-serif;
+    color: azure;
+    line-height: 60px;
+    float: left;
+}
+.right {
+    float: right;
+    margin-right: 6%;
+    margin-top:  6%;
+    align-items: center;
+    display:flex;
+}
+.right p{
+    font-size: 30px;
+    color:azure;
+    font-family: sans-serif;
+    margin: right 10px;
+}
+.video{
+    width: 100%;
+   position: absolute;
+   top: 80%;
+}
+.left-video{
+    margin-left: 6%;
+
+
+}
+.left-video h3{
+    font-size: 200%;
+    font-family: sans-serif;
+    color: azure;
+    line-height: 60px;
+    float: left;
+}
+.right-video {
+    float: right;
+    margin-right: 6%;
+ 
+    align-items: center;
+    display:flex;
+}  
+.right-video p{
+    font-size: 30px;
+    color:azure;
+    font-family: sans-serif;
+    margin: right 10px;
+}
+#button{
+    width: 90px;
+    cursor: pointer;
+}
