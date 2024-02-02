@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+</head>
+
+<body>
+
+    <section class="hero">
+
+        <nav class="navbar">
+            <h1>Welcome</h1>
+            <ul>
+                <li><a href="#">Listen Now</a></li>
+                <li><a href="#">Watch Now</a></li>
+
+            </ul>
+
+            <input type="text" id="search-input">
+            <button id="search-btn">Search</button>
+        </nav>
+        <div class="content">
+            <div class="left">
+                <h2>THE <br> BEST <br> MUSIC <br> PLAYER</h2>
+
+            </div>
+            <div class="right">
+                
+                 <h3 id="artist"></h3>
+                 <h3 id="title"></h3>
+                 <h3 id="duration"></h3>
+                </div>
+                <div id="embed-iframe"></div>
+
+            </div>
+        </div>
+        <div class="video">
+            <div class="left-video">
+                <h3>WATCH NOW</h3>
+
+            </div>
+            <div class="right-video">
+                <p>Click To Play</p>
+               
+
+
+            </div>
+        </div>
+       
+
+
+    </section>
+
+
+
+    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./assets/js/javascript.js"></script>
+
+</body>
+
+</html>
