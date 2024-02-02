@@ -2,6 +2,10 @@
     margin: 0%;
     padding: 0%;
 }
+a, a:hover, a:active {
+    text-decoration: none;
+  
+  }
 
 .hero{
     width: 100%;
@@ -52,6 +56,7 @@ font-size: 150%;
 }
 .right {
     float: right;
+    color:azure;
     margin-right: 6%;
     margin-top:  6%;
     align-items: center;

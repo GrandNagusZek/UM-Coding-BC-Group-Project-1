@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music player</title>
-    <link rel="stylesheet" href="./assets/css/reset.css">
+    
     <link rel="stylesheet" href="./assets/css/style.css">
-
+    
 </head>
 
 <body>
@@ -22,6 +22,8 @@
 
             </ul>
 
+            <input type="text" id="search-input">
+            <button id="search-btn">Search</button>
         </nav>
         <div class="content">
             <div class="left">
@@ -29,8 +31,12 @@
 
             </div>
             <div class="right">
-                <p>Click To Play</p>
-               <img src="./assets/images/play3.png" id="button">
+                
+                 <h3 id="artist"></h3>
+                 <h3 id="title"></h3>
+                 <h3 id="duration"></h3>
+                </div>
+                <div id="embed-iframe"></div>
 
             </div>
         </div>
@@ -41,7 +47,8 @@
             </div>
             <div class="right-video">
                 <p>Click To Play</p>
-                <img src="./assets/images/play3.png" id="button">
+               
+
 
             </div>
         </div>
@@ -52,10 +59,7 @@
 
 
 
-
-
-
-
+    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./assets/js/javascript.js"></script>
