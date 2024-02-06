@@ -7,5 +7,11 @@ A simple web application that allows users to search for music, displaying resul
 ## Features
 
 * Search for music using the provided input field.
-* Display
+* Display the top Spotify track related to the search term.
+* Display a YouTube video related to the search term.
+
+
+## Usage
+
+
 
