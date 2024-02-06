@@ -177,9 +177,23 @@ searchButton.addEventListener("click", searchMusic)
 
 async function searchMusic() {
     const searchTerm = searchInput.value;
-    displayVideoInIFrame(search);
+    displayVideoInIFrame(searchTerm);
     displaySpotify(searchTerm);
 
     // Save the searched term to local storage
     saveToLocalStorage('searchedMusic', searchTerm);
+}
+
+function saveToLocalStorage(key, value) {
+    // Retrieve existing data from local storage
+    const existingData = localStorage.getItem(key);
+
+    // Parse existing data (or initialize an empty array if it doesn't exist)
+    const dataArray = existingData ? JSON.parse(existingData) : [];
+
+    // Add the new value to the array
+    dataArray.push(value);
+
+    // Save the updated array back to local storage
+    localStorage.setItem(key, JSON.stringify(dataArray));
 }
