@@ -183,7 +183,3 @@ async function searchMusic() {
     // Save the searched term to local storage
     saveToLocalStorage('searchedMusic', searchTerm);
 }
-
-function saveToLocalStorage(key, value) {
-    
-}
