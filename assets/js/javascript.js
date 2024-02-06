@@ -197,3 +197,44 @@ function saveToLocalStorage(key, value) {
     // Save the updated array back to local storage
     localStorage.setItem(key, JSON.stringify(dataArray));
 }
+
+
+// Function to display recent searches
+function displayRecentSearches() {
+    const recentSearchesContainer = document.getElementById('recent-searches');
+
+   
+    //Function to clear recent searches
+    function clearRecentSearches() {
+        localStorage.clear();
+        localStorage.removeItem('searchedMusic');
+        displayRecentSearches();
+    }
+
+    // Retrieve recent searches from localStorage
+    const recentSearches = JSON.parse(localStorage.getItem('searchedMusic')) || [];
+
+    // Limit the displayed searches to the last 3 results
+    const limitedSearches = recentSearches.slice(-3);
+
+    // Clear previous content
+    recentSearchesContainer.innerHTML = '';
+
+    // Display each recent search in the container
+    recentSearches.forEach(search => {
+        const searchItem = document.createElement('div');
+        searchItem.textContent = search;
+        recentSearchesContainer.appendChild(searchItem);
+    });
+}
+
+// Call the displayRecentSearches function to initially populate the element
+displayRecentSearches();
+
+
+// Attach the displayRecentSearches function to the click event of the search button
+searchButton.addEventListener("click", function () {
+    searchMusic();
+    displayRecentSearches(); // Update recent searches after a new search
+});
+
