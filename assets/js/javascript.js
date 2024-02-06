@@ -172,3 +172,18 @@ function stopVideo() {
 }
 
 searchButton.addEventListener("click", searchMusic)
+
+
+
+async function searchMusic() {
+    const searchTerm = searchInput.value;
+    displayVideoInIFrame(search);
+    displaySpotify(searchTerm);
+
+    // Save the searched term to local storage
+    saveToLocalStorage('searchedMusic', searchTerm);
+}
+
+function saveToLocalStorage(key, value) {
+    
+}
