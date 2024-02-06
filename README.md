@@ -27,8 +27,12 @@ A simple web application that allows users to search for music, displaying resul
 
 ## Contributions
 
+We express our gratitude to our instructor for providing invaluable guidance and support throughout the development process. His expertise and mentorship have been instrumental in shaping the project and enhancing our understanding of web development.
 
+A special acknowledgment to our group for everyones hard work and collaboration. Each team member has shown their commitment to the project, contributing their skills and insights to create this project. 
+
+We would especially like to highlight the effort Anica put into referring to the appropriate API documentation. As well as understanding and integrating the YouTube Data API and Spotify Web API. These were crucial steps in building the music search functionality. She diligently followed the documentation, ensuring the effective utilization of these APIs to provide users with accurate and relevant results.
 
 ## License
 
-
+MIT License
