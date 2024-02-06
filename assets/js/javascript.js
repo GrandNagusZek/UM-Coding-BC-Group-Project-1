@@ -1,16 +1,28 @@
 
 var searchInput = document.getElementById("search-input")
 var searchButton = document.getElementById("search-btn")
+var lastSearchButton = document.getElementById("last-search-btn");
+var clearButton = document.getElementById("clear-btn");
 var video = document.getElementById("video")
 var tag = document.createElement('script');
 var currentVideoIdForYoutube = '';
 var player;
 var done = false;
 
+var lastSearchTerm = localStorage.getItem('searchTerm');
+if (lastSearchTerm) {
+    searchInput.value = lastSearchTerm;
+}
 async function searchMusic() {
     const searchTerm = searchInput.value;
+    localStorage.setItem('searchTerm', searchTerm);
     displayVideoInIFrame(searchTerm);
     displaySpotify(searchTerm)
+}
+
+function clearSearch() {
+    localStorage.removeItem('searchTerm');
+    searchInput.value = '';
 }
 
 // function displayResult(data) {
@@ -26,7 +38,6 @@ async function searchMusic() {
 // durationEl.textContent = duration
 
 // displaySpotify()
-
 
 
 async function displaySpotify(searchTerm) {
@@ -130,6 +141,10 @@ function extractFirstVideoFromListOfYoutubeVideos(list) {
 }
 
 async function displayVideoInIFrame(searchTerm) {
+    const storedSearchTerm = localStorage.getItem('searchTerm');
+    if (storedSearchTerm !== null) {
+        searchTerm = storedSearchTerm;
+    }
 
     const listOfVideos = await getListFromYoutubeAPI(searchTerm);
 
@@ -172,14 +187,11 @@ function stopVideo() {
 }
 
 searchButton.addEventListener("click", searchMusic)
-
-
-
-async function searchMusic() {
-    const searchTerm = searchInput.value;
-    displayVideoInIFrame(search);
-    displaySpotify(searchTerm);
-
-    // Save the searched term to local storage
-    saveToLocalStorage('searchedMusic', searchTerm);
-}
+lastSearchButton.addEventListener("click", function() {
+    var lastSearchTerm = localStorage.getItem('searchTerm');
+    if (lastSearchTerm) {
+        searchInput.value = lastSearchTerm;
+        searchMusic();
+    }
+});
+clearButton.addEventListener("click", clearSearch);
