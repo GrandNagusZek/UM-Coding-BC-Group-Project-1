@@ -10,8 +10,6 @@
     background-size: cover;
     background-position: center;
     position: relative;
-    
- 
 }
 
 
@@ -54,4 +52,10 @@
 .columns{
     padding-top: 3%;
     align-items: center;
+
+}
+
+#player-youtube{
+    height: 42vh;
+    width: 100%;
 }
