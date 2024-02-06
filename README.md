@@ -13,5 +13,22 @@ A simple web application that allows users to search for music, displaying resul
 
 ## Usage
 
+1. Open 'index.html' in a web browser.
+2. Enter a music search term in in the provided input field.
+3. Click the "Search" button.
+4. View the top Spotify track and a related YouTube video.
+
+
+## Dependencies 
+
+* Spotify API: Used to fetch information about music tracks.
+* YouTube API: Used to search for YouTube videos related to the music search term.
+
+
+## Contributions
+
+
+
+## License
 
 
