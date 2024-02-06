@@ -33,6 +33,18 @@ A special acknowledgment to our group for everyones hard work and collaboration.
 
 We would especially like to highlight the effort Anica put into referring to the appropriate API documentation. As well as understanding and integrating the YouTube Data API and Spotify Web API. These were crucial steps in building the music search functionality. She diligently followed the documentation, ensuring the effective utilization of these APIs to provide users with accurate and relevant results.
 
+
+## Links and Images
+
+Live app URL: https://grandnaguszek.github.io/UM-Coding-BC-Group-Project-1/
+
+GitHub repo URL: https://github.com/GrandNagusZek/UM-Coding-BC-Group-Project-1.git
+
+Screenshot of App:
+
+![Screenshot Of live App](assets/images/Screenshot 2024-02-06 at 6.26.38 PM.png)
+
+
 ## License
 
 MIT License
