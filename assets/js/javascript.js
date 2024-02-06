@@ -10,9 +10,6 @@ var player;
 var done = false;
 
 var lastSearchTerm = localStorage.getItem('searchTerm');
-if (lastSearchTerm) {
-    searchInput.value = lastSearchTerm;
-}
 async function searchMusic() {
     const searchTerm = searchInput.value;
     localStorage.setItem('searchTerm', searchTerm);
@@ -21,24 +18,8 @@ async function searchMusic() {
 }
 
 function clearSearch() {
-    localStorage.removeItem('searchTerm');
     searchInput.value = '';
 }
-
-// function displayResult(data) {
-// if (!data && !data.result && data.result < 1) {
-
-//     return;
-// }
-// var author = data.result[0].author
-// artistEl.textContent = author
-// var title = data.result[0].title
-// titleEl.textContent = title
-// var duration = data.result[0].duration
-// durationEl.textContent = duration
-
-// displaySpotify()
-
 
 async function displaySpotify(searchTerm) {
     const url = 'https://spotify23.p.rapidapi.com/search/?q=' + searchTerm + '&type=multi&offset=0&limit=10&numberOfTopResults=5';
